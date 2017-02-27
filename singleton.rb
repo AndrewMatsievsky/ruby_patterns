@@ -1,3 +1,5 @@
+# Singleton pattern: ensure that only one instance of class is created
+# Provide global point to it
 class Chosen
   @@one = nil
   def self.one
@@ -19,7 +21,7 @@ wanderer = Chosen.one
 wanderer.create('Wasteland Dweller')
 
 raider = Chosen.one
-raider.create('Someone')
+
 
 puts raider == wanderer
 puts raider.get_name
